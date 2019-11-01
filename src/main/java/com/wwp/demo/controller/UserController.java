@@ -32,4 +32,10 @@ public class UserController {
         int insert = userService.saveUser(user);
         return insert;
     }
+
+    @RequestMapping("getUserListByPage")
+    public List<User> getUserListByPage(){
+        List<User> userList = userService.getUserListByPage();
+        return userList;
+    }
 }

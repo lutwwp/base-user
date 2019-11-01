@@ -85,7 +85,7 @@ public class EncryptionAndDecryptionAmountAspect {
             for (Annotation declaredAnnotation : declaredAnnotations) {
                 if (declaredAnnotation instanceof DecryptionAmount) {
                     log.info(resultValue.toString());
-                    if (resultValue != null && resultValue instanceof List) {
+                    if (resultValue instanceof List) {
                         List<User> userList = (List) resultValue;
                         for (User user : userList) {
                             if (!StringUtils.isEmpty(user.getAmount())) {
